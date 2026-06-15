@@ -170,11 +170,6 @@ def main():
     # -------------------------------------------------------------------------
     informe_final = generate_summary_report(reporte_calidad)
     print(informe_final)
-    
-    # Opcional: Escribir log en disco para cumplimiento de principio Reusable (FAIR)
-    log_path = base_dir / "profiling_log.txt"
-    with open(log_path, "w", encoding="utf-8") as f:
-        f.write(informe_final)
 
 if __name__ == "__main__":
     main()
