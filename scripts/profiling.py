@@ -12,7 +12,7 @@ from typing import Dict, Tuple, List, Optional, Any
 # 1. FUNCIONES GENÉRICAS (Motor de Auditoría)
 # =============================================================================
 
-def load_raw_data(file_path: Path, sheet_name: Optional[str] = None) -> pd.DataFrame:
+def load_raw_data(file_path: Path, sheet_name: Optional[str | int] = 0) -> pd.DataFrame:
     """
     Centraliza la lectura física abstrayendo el formato y forzando codificación UTF-8.
     """
