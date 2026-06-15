@@ -77,9 +77,10 @@ def generate_summary_report(report_data: Dict[str, Any]) -> str:
         for metric_name, value in metrics.items():
             if isinstance(value, dict):
                 lines.append(f"  [-] {metric_name.upper()}:")
+                max_k_len = max(len(k) for k in value.keys()) + 2
                 for k, v in value.items():
                     if v[0] > 0:  # Imprimir solo si hay nulos para reducir ruido
-                        lines.append(f"      - {k}: {v[0]} nulos ({v[1]}%)")
+                        lines.append(f"      - {k:<{max_k_len}} {v[0]:>4} ({v[1]}%)")
             elif isinstance(value, list):
                 lines.append(f"  [-] {metric_name.upper()}: {len(value)} discrepancias encontradas.")
             elif isinstance(value, pd.DataFrame):
