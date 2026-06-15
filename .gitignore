@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Entornos
+.venv/
+venv/
+env/
+.python-version.local
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Datos
+data/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Secretos
+.env
+.env.*
+!.env.example
+
+# Archivos temporales de Office
+~$*
+
+# Artefactos de compilación LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# instructions
+.github/instructions/
