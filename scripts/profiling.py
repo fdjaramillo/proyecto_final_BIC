@@ -1,7 +1,6 @@
 """
-profiling.py
 Pipeline de Auditoría Forense y Diagnóstico de Calidad de Datos Clínicos.
-Entorno: SISCAT / Proyecto Final BIC 2025-2026.
+Proyecto Final BIC 2025-2026.
 """
 
 import pandas as pd
@@ -9,7 +8,7 @@ from pathlib import Path
 from typing import Dict, Tuple, List, Optional, Any
 
 # =============================================================================
-# 1. FUNCIONES GENÉRICAS (Motor de Auditoría)
+# 1. FUNCIONES GENÉRICAS
 # =============================================================================
 
 def load_raw_data(file_path: Path, sheet_name: Optional[str | int] = 0) -> pd.DataFrame:
@@ -68,7 +67,7 @@ def validate_id_integrity(source_ids: pd.Series, target_ids: pd.Series) -> List[
 
 def generate_summary_report(report_data: Dict[str, Any]) -> str:
     """
-    Consolida las métricas en texto estructurado y directo para consola/log.
+    Consolida las métricas en texto estructurado y directo para consola.
     """
     lines = ["\n" + "="*60, "REPORTE DE AUDITORÍA DE CALIDAD (PROFILING)", "="*60]
     
@@ -93,7 +92,7 @@ def generate_summary_report(report_data: Dict[str, Any]) -> str:
 
 
 # =============================================================================
-# 2. ORQUESTACIÓN Y APLICACIÓN ESPECÍFICA (Flujo Principal)
+# 2. ORQUESTACIÓN Y APLICACIÓN DE FUNCIONES
 # =============================================================================
 
 def main():
